@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
-$Origin = 'https://jf-baterias-alvares-machado.mtsartslogotipo.chatgpt.site'
+$Origin = 'https://jfbaterias.vercel.app'
 $Root = Join-Path $PSScriptRoot 'dist'
 $Wa = 'https://wa.me/5518991114834?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20JF%20Baterias.%20Preciso%20de%20uma%20bateria%20para%20meu%20ve%C3%ADculo.%20Poderia%20me%20informar%20o%20valor%20e%20o%20prazo%20para%20entrega%20e%20instala%C3%A7%C3%A3o%3F'
 $BizSchema = @{

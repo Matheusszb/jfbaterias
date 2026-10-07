@@ -10,6 +10,7 @@ Site estático da JF Baterias, com atendimento em Álvares Machado, Presidente P
 - Metadados, dados estruturados, sitemap e robots.txt
 
 Os arquivos prontos para hospedagem estão em `dist/`. A página inicial é `dist/index.html`.
+A configuração em `vercel.json` indica à Vercel que a pasta publicada é `dist/`.
 
 Para atualizar as páginas geradas, edite `build.ps1` e execute:
 
