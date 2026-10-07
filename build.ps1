@@ -71,7 +71,7 @@ function Write-Page {
   <a class="brand" href="/" aria-label="JF Baterias — início"><img src="/assets/jf-baterias-logo.png" width="106" height="65" alt="JF Baterias"></a>
   <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰ Menu</button>
   <nav class="nav" id="menu" aria-label="Menu principal">
-    <a href="/">Início</a><a href="/#servicos">Serviços</a><a href="/#marcas">Baterias</a><a href="/#areas">Áreas atendidas</a><a href="/#duvidas">Dúvidas</a><a class="button small" href="$Wa" target="_blank" rel="noopener">Pedir bateria</a>
+    <a href="/#veiculos">Veículos</a><a href="/#marcas">Marcas</a><a href="/#como-funciona">Como funciona</a><a href="/#areas">Região</a><a class="button small" href="$Wa" target="_blank" rel="noopener">Pedir bateria</a>
   </nav>
 </div></header>
 <main id="conteudo">$Body</main>
@@ -92,60 +92,22 @@ function Write-Page {
   [System.IO.File]::WriteAllText((Join-Path $dir 'index.html'),$html,(New-Object System.Text.UTF8Encoding($false)))
 }
 $homeFaq = @(
-  @{Q='A JF Baterias entrega bateria em Álvares Machado?';A='Sim. Fazemos entrega e instalação de baterias em Álvares Machado e regiões próximas. Consulte a disponibilidade para sua localização pelo WhatsApp.'},
-  @{Q='Vocês atendem Presidente Prudente?';A='Sim. Atendemos diversas regiões de Presidente Prudente. Envie seu bairro para confirmar a disponibilidade do atendimento.'},
-  @{Q='A bateria é instalada no local?';A='Sim. Levamos a bateria adequada e fazemos a instalação no local combinado.'},
-  @{Q='Como saber qual bateria meu carro usa?';A='Envie modelo, ano e motorização do veículo pelo WhatsApp para verificarmos a opção adequada.'},
-  @{Q='Vocês testam a bateria e o alternador?';A='Sim. Verificamos a bateria e o sistema de carga para ajudar a identificar a causa da falha na partida.'},
-  @{Q='Quais marcas vocês trabalham?';A='Trabalhamos com Moura, Heliar, Zetta e outras marcas conforme a disponibilidade para o seu veículo.'},
-  @{Q='Posso pagar no cartão?';A='Sim. Há parcelamento em até 10x no cartão. Consulte as condições para a bateria do seu veículo pelo WhatsApp.'}
+  @{Q='Vocês instalam no local?';A='Sim. Levamos e instalamos a bateria no endereço combinado, conforme disponibilidade.'},
+  @{Q='Como sei qual bateria comprar?';A='Envie modelo, ano e motor do veículo. Verificamos a opção adequada.'},
+  @{Q='Vocês atendem meu bairro?';A='Atendemos Álvares Machado e regiões de Presidente Prudente. Envie sua localização para confirmar.'}
 )
-$homeBody = @'
-<section class="hero"><div class="wrap hero-grid"><div>
-  <div class="eyebrow">Bateria delivery em Álvares Machado e região</div>
-  <h1>Bateria arriou?<br><span>A gente leva e instala pra você.</span></h1>
-  <p class="lead">Moura, Heliar, Zetta e outras marcas. Entrega, instalação e teste no local em Álvares Machado, Presidente Prudente e região.</p>
-  <ul class="hero-checks"><li>Carros, motos e veículos pesados</li><li>Teste de bateria e alternador</li><li>Garantia de fábrica</li><li>Instalação no local</li></ul>
-  <div class="payment">Até 10x no cartão</div>
-  <div class="hero-actions"><a class="button" href="WA_LINK" target="_blank" rel="noopener">Pedir bateria no WhatsApp</a><a class="button secondary" href="#marcas">Ver baterias</a></div>
-  <p class="phone-line">Ou ligue: <a href="tel:+5518991114834">(18) 99111-4834</a></p>
-</div><div class="hero-media">
-  <img src="/assets/bateria-instalada.jpg" width="1600" height="900" alt="Bateria automotiva instalada em veículo atendido pela JF Baterias" fetchpriority="high">
-  <div class="media-badge">Atendimento no local<small>Entrega • Instalação • Teste</small></div>
-</div></div></section>
-<div class="benefits"><div class="wrap benefit-grid">
-  <div class="benefit"><strong>Entrega no local</strong><span>Você não precisa sair de casa.</span></div><div class="benefit"><strong>Instalação profissional</strong><span>Substituição no local combinado.</span></div><div class="benefit"><strong>Teste do sistema</strong><span>Bateria e sistema de carga.</span></div><div class="benefit"><strong>Garantia de fábrica</strong><span>Conforme condições do fabricante.</span></div>
-</div></div>
-<section class="section" id="servicos"><div class="wrap">
-  <div class="section-head"><div class="eyebrow">Como ajudamos</div><h2 class="section-title">Seu carro não ligou?<br><span>Pode ser a bateria.</span></h2><p>Antes de trocar, verificamos a bateria e o sistema de carga. Se a substituição for necessária, levamos a opção adequada e instalamos onde o veículo estiver.</p></div>
-  <div class="cards"><article class="card"><span class="num">01</span><h3>Bateria delivery</h3><p>Entregamos a bateria no endereço combinado, em Álvares Machado e regiões atendidas de Presidente Prudente.</p><a class="text-link" href="/bateria-delivery-alvares-machado">Ver atendimento local</a></article><article class="card"><span class="num">02</span><h3>Instalação no local</h3><p>Retiramos a bateria antiga e instalamos a nova com atenção às características do veículo.</p><a class="text-link" href="/instalacao-de-bateria">Entenda a instalação</a></article><article class="card"><span class="num">03</span><h3>Teste de bateria e alternador</h3><p>Verificamos a condição da bateria e se o sistema de carga está funcionando corretamente.</p><a class="text-link" href="/teste-de-bateria-e-alternador">Saiba como funciona</a></article></div>
-</div></section>
-<section class="section alt" id="como-funciona"><div class="wrap"><div class="section-head"><div class="eyebrow">Simples e direto</div><h2 class="section-title">Da mensagem <span>à partida.</span></h2></div>
-  <div class="steps"><div class="step"><b>01</b><h3>Fale com a gente</h3><p>Envie modelo, ano, motor e bairro.</p></div><div class="step"><b>02</b><h3>Confirmamos a opção</h3><p>Verificamos a bateria adequada e a disponibilidade.</p></div><div class="step"><b>03</b><h3>Vamos até você</h3><p>Combinamos a entrega para sua localização.</p></div><div class="step"><b>04</b><h3>Instalamos e testamos</h3><p>Fazemos a troca e conferimos o sistema.</p></div></div>
-</div></section>
-<section class="section" id="marcas"><div class="wrap"><div class="section-head"><div class="eyebrow">Opções para seu veículo</div><h2 class="section-title">Marcas <span>reconhecidas.</span></h2><p>A amperagem e a tecnologia corretas dependem do veículo. Consulte a disponibilidade antes de comprar.</p></div>
-  <div class="brand-grid"><article class="brand-card"><h3>Moura</h3><p>Linhas para diferentes aplicações automotivas.</p><a class="text-link" href="/bateria-moura">Conhecer Moura</a></article><article class="brand-card"><h3>Heliar</h3><p>Opções para carros e outras categorias de veículos.</p><a class="text-link" href="/bateria-heliar">Conhecer Heliar</a></article><article class="brand-card"><h3>Zetta</h3><p>Alternativa de custo e benefício para aplicações compatíveis.</p><a class="text-link" href="/bateria-zetta">Conhecer Zetta</a></article></div>
-  <p class="copy">Também trabalhamos com outras marcas conforme a disponibilidade.</p><a class="button" href="WA_LINK" target="_blank" rel="noopener">Consultar bateria</a>
-</div></section>
-<section class="section alt"><div class="wrap split"><div><div class="eyebrow">Atendimento real</div><h2 class="section-title">A bateria certa <span>para seu veículo.</span></h2><p class="copy">Atendemos carros, motos e veículos pesados. Alguns modelos usam bateria convencional, EFB ou AGM e podem exigir procedimentos eletrônicos após a troca. Informe seu veículo para verificarmos a aplicação correta.</p><p class="copy">A JF Baterias usa equipamentos de diagnóstico para auxiliar em veículos compatíveis.</p><a class="button secondary" href="WA_LINK" target="_blank" rel="noopener">Descobrir minha bateria</a></div><img class="photo" src="/assets/scanner-automotivo.jpg" width="1600" height="900" loading="lazy" alt="Scanner automotivo usado pela JF Baterias em diagnóstico de veículo"></div></section>
-<section class="section" id="areas"><div class="wrap"><div class="section-head"><div class="eyebrow">Onde atendemos</div><h2 class="section-title">Bateria delivery <span>na sua região.</span></h2><p>Atendimento em Álvares Machado e em diversas regiões de Presidente Prudente. Confirme sua localização e o prazo pelo WhatsApp.</p></div>
-  <div class="areas"><article class="area-card"><h3>Álvares Machado</h3><p>Entrega e instalação de bateria no local para motoristas de Álvares Machado e áreas próximas, mediante disponibilidade.</p><a class="text-link" href="/bateria-delivery-alvares-machado">Bateria delivery em Álvares Machado</a></article><article class="area-card"><h3>Presidente Prudente</h3><p>Consulte atendimento em bairros como São João, Shiraiva, Vale do Sol, Jardim Tropical, Ana Jacinta e região.</p><a class="text-link" href="/bateria-delivery-presidente-prudente">Bateria delivery em Presidente Prudente</a></article></div>
-  <p class="copy">Não encontrou seu bairro? <a class="text-link" href="WA_LINK" target="_blank" rel="noopener">Consulte sua localização.</a></p>
-</div></section>
-<section class="section alt" id="duvidas"><div class="wrap"><div class="section-head"><div class="eyebrow">Perguntas frequentes</div><h2 class="section-title">Dúvidas <span>rápidas.</span></h2></div><div class="faq">
-  <details><summary>A JF Baterias entrega bateria em Álvares Machado?</summary><p>Sim. Fazemos entrega e instalação de baterias em Álvares Machado e regiões próximas. Consulte a disponibilidade para sua localização pelo WhatsApp.</p></details>
-  <details><summary>Vocês atendem Presidente Prudente?</summary><p>Sim. Atendemos diversas regiões de Presidente Prudente. Envie seu bairro para confirmar a disponibilidade do atendimento.</p></details>
-  <details><summary>A bateria é instalada no local?</summary><p>Sim. Levamos a bateria adequada e fazemos a instalação no local combinado.</p></details>
-  <details><summary>Como saber qual bateria meu carro usa?</summary><p>Envie modelo, ano e motorização do veículo pelo WhatsApp para verificarmos a opção adequada.</p></details>
-  <details><summary>Vocês testam a bateria e o alternador?</summary><p>Sim. Verificamos a bateria e o sistema de carga para ajudar a identificar a causa da falha na partida.</p></details>
-  <details><summary>Quais marcas vocês trabalham?</summary><p>Trabalhamos com Moura, Heliar, Zetta e outras marcas conforme a disponibilidade para o seu veículo.</p></details>
-  <details><summary>Posso pagar no cartão?</summary><p>Sim. Há parcelamento em até 10x no cartão. Consulte as condições para a bateria do seu veículo pelo WhatsApp.</p></details>
-</div></div></section>
-<section class="cta-band"><div class="wrap cta-grid"><div><h2>Seu carro não está ligando?</h2><p>Chame a JF Baterias e consulte o atendimento para sua região.</p></div><a class="button" href="WA_LINK" target="_blank" rel="noopener">Chamar no WhatsApp</a></div></section>
-<section class="section" id="contato"><div class="wrap split"><div><div class="eyebrow">Consulta rápida</div><h2 class="section-title">Conte qual é <span>seu veículo.</span></h2><p class="copy">Preencha os dados e abriremos uma mensagem pronta no WhatsApp. Confirmaremos a bateria, a disponibilidade e o atendimento para seu bairro.</p><p class="phone-line">WhatsApp: <a href="tel:+5518991114834">(18) 99111-4834</a></p></div>
-  <form id="consult-form" class="form-grid"><div class="field"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required></div><div class="field"><label for="veiculo">Modelo do veículo</label><input id="veiculo" name="veiculo" required></div><div class="field"><label for="ano">Ano</label><input id="ano" name="ano" inputmode="numeric" required></div><div class="field"><label for="motor">Motor</label><input id="motor" name="motor"></div><div class="field full"><label for="bairro">Bairro ou localização</label><input id="bairro" name="bairro" required></div><button class="button" type="submit">Consultar no WhatsApp</button></form>
-</div></section>
-'@
+$homeBody = [System.IO.File]::ReadAllText((Join-Path $PSScriptRoot 'home.template.html'), [System.Text.Encoding]::UTF8)
+$homeMessages = @{
+  'WA_MOTO'='Olá! Vim pelo site da JF Baterias e preciso de uma bateria para minha moto.'
+  'WA_CARRO'='Olá! Vim pelo site da JF Baterias e preciso de uma bateria para meu carro.'
+  'WA_PESADO'='Olá! Vim pelo site da JF Baterias e preciso de uma bateria para veículo pesado.'
+  'WA_MOURA'='Olá! Gostaria de consultar uma bateria Moura para meu veículo.'
+  'WA_HELIAR'='Olá! Gostaria de consultar uma bateria Heliar para meu veículo.'
+  'WA_ZETTA'='Olá! Gostaria de consultar uma bateria Zetta para meu veículo.'
+}
+foreach ($key in $homeMessages.Keys) {
+  $homeBody = $homeBody.Replace($key,('https://wa.me/5518991114834?text=' + [uri]::EscapeDataString($homeMessages[$key])))
+}
 $homeBody = $homeBody.Replace('WA_LINK',$Wa)
 Write-Page -Path '' -Title 'JF Baterias | Bateria Delivery em Álvares Machado e Presidente Prudente' -Description 'Bateria arriou? A JF Baterias entrega e instala em Álvares Machado, Presidente Prudente e região. Teste de bateria e alternador. Chame no WhatsApp.' -Body $homeBody -Faq $homeFaq
 $machadoFaq = @(
@@ -178,7 +140,7 @@ function Write-Detail {
   $body = @"
 <section class="page-hero"><div class="wrap"><div class="breadcrumb"><a href="/">Início</a> / $H1</div><div class="eyebrow">$Eyebrow</div><h1>$H1</h1><p>$Intro</p><a class="button" href="$Wa" target="_blank" rel="noopener">$Action</a></div></section>
 <section class="section"><div class="wrap detail-grid"><div><h2>$Heading</h2><p>$P1</p><p>$P2</p><div class="note">Informe modelo, ano e motor do veículo para consultar a opção adequada e a disponibilidade.</div></div><aside class="aside-box"><h3>$ListHeading</h3><ul>$list</ul><a class="button" href="$Wa" target="_blank" rel="noopener">Consultar no WhatsApp</a></aside></div></section>
-<section class="section alt"><div class="wrap image-text"><img src="$Image" width="900" height="1600" loading="lazy" alt="$Alt"><div><div class="eyebrow">JF Baterias</div><h2 class="section-title">$ImageHeading</h2><p class="copy">$ImageText</p><a class="text-link" href="/#contato">Enviar dados do veículo</a></div></div></section>
+<section class="section alt"><div class="wrap image-text"><img src="$Image" width="900" height="1600" loading="lazy" alt="$Alt"><div><div class="eyebrow">JF Baterias</div><h2 class="section-title">$ImageHeading</h2><p class="copy">$ImageText</p><a class="text-link" href="$Wa" target="_blank" rel="noopener">Enviar dados do veículo</a></div></div></section>
 <section class="section"><div class="wrap"><div class="section-head"><h2 class="section-title">Atendimento em <span>Álvares Machado e Presidente Prudente</span></h2><p>Consulte entrega e instalação para sua localização. A disponibilidade de modelos e amperagens varia.</p></div><div class="areas"><div class="area-card"><h3>Álvares Machado</h3><a class="text-link" href="/bateria-delivery-alvares-machado">Ver atendimento em Álvares Machado</a></div><div class="area-card"><h3>Presidente Prudente</h3><a class="text-link" href="/bateria-delivery-presidente-prudente">Ver atendimento em Presidente Prudente</a></div></div></div></section>
 <section class="cta-band"><div class="wrap cta-grid"><div><h2>Precisa de uma bateria?</h2><p>Fale com a JF Baterias pelo WhatsApp: (18) 99111-4834.</p></div><a class="button" href="$Wa" target="_blank" rel="noopener">Pedir bateria</a></div></section>
 "@
