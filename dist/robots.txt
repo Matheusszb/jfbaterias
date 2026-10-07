@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jf-baterias-alvares-machado.mtsartslogotipo.chatgpt.site/sitemap.xml
