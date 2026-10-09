@@ -35,8 +35,8 @@
 .brands-v2 .home-kicker,.faq-v2 .home-kicker{background:#272114;border-color:#74541c;color:#ffbe42}
 .brand-grid-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .brand-tile{overflow:hidden;border:1px solid #363a3d;background:#1b1e20;border-radius:16px;display:flex;flex-direction:column}
-.brand-visual{height:175px;background:#e9ebea;overflow:hidden;display:grid;place-items:center}
-.brand-visual img{width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.brand-visual{height:225px;background:radial-gradient(circle at 50% 35%,#353a3c,#191c1e 72%);overflow:hidden;display:grid;place-items:center;padding:20px}
+.brand-visual img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 12px rgba(0,0,0,.35))}
 .brand-wordmark{background:linear-gradient(135deg,#2c2f31,#111314);color:#fff;line-height:1;text-align:center;align-content:center}
 .brand-wordmark strong{font-family:Impact,Arial,sans-serif;font-size:3.3rem;letter-spacing:.12em;color:#ffb508}
 .brand-wordmark span{display:block;margin-top:8px;font-size:.7rem;letter-spacing:.4em;color:#c8c8c8}
@@ -71,6 +71,10 @@
 .faq-v2 summary{font-size:1.1rem}
 .faq-v2 .faq p{max-width:700px}
 .cta-phone{display:inline-block;margin-top:8px;font-size:1.2rem;color:#fff;font-weight:900}
-@media(max-width:960px){.hero-v2 .hero-grid{gap:25px}.vehicle-image{height:220px}.vehicle-image img{height:210px}.vehicle-bottom{display:block}.vehicle-bottom span{display:block;margin-top:4px}.brand-visual{height:145px}}
-@media(max-width:720px){.hero-v2{padding:35px 0 42px}.hero-v2 .hero-grid,.service-panel{grid-template-columns:1fr}.hero-v2 h1{font-size:clamp(3.3rem,12vw,5rem)}.hero-v2 .hero-media,.hero-v2 .hero-media img{height:290px}.hero-v2 .hero-facts{display:grid;gap:4px;margin-top:17px}.home-section{padding:55px 0}.vehicle-grid,.brand-grid-v2,.process-grid,.area-links{grid-template-columns:1fr}.vehicle-card{display:grid;grid-template-columns:46% 54%;min-height:142px}.vehicle-image{height:100%;min-height:142px}.vehicle-image img{height:140px}.vehicle-bottom{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:16px}.brand-tile{display:grid;grid-template-columns:40% 60%}.brand-visual{height:100%;min-height:175px}.brand-info{padding:16px}.brand-info h3{font-size:1.6rem}.brand-info p{font-size:.84rem}.brand-action{font-size:.72rem;padding:10px 8px}.process-grid>div{padding:18px}.service-panel{gap:22px}.service-photo img{height:250px}.service-text h2{font-size:2.8rem}.area-links a{min-height:110px}.home-heading h2{font-size:clamp(2.5rem,9vw,3.6rem)}}
-@media(max-width:410px){.brand-tile{grid-template-columns:1fr}.brand-visual{height:145px;min-height:0}.brand-info{padding:18px}.vehicle-card{grid-template-columns:42% 58%}.vehicle-bottom strong{font-size:1.2rem}}
+@media(max-width:960px){.hero-v2 .hero-grid{gap:25px}.vehicle-image{height:220px}.vehicle-image img{height:210px}.vehicle-bottom{display:block}.vehicle-bottom span{display:block;margin-top:4px}.brand-visual{height:200px}}
+@media(max-width:720px){.hero-v2{padding:35px 0 42px}.hero-v2 .hero-grid,.service-panel{grid-template-columns:1fr}.hero-v2 h1{font-size:clamp(3.3rem,12vw,5rem)}.hero-v2 .hero-media,.hero-v2 .hero-media img{height:290px}.hero-v2 .hero-facts{display:grid;gap:4px;margin-top:17px}.home-section{padding:55px 0}.vehicle-grid,.brand-grid-v2,.process-grid,.area-links{grid-template-columns:1fr}.vehicle-card{display:grid;grid-template-columns:46% 54%;min-height:142px}.vehicle-image{height:100%;min-height:142px}.vehicle-image img{height:140px}.vehicle-bottom{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:16px}.brand-tile{display:grid;grid-template-columns:40% 60%}.brand-visual{height:100%;min-height:190px}.brand-info{padding:16px}.brand-info h3{font-size:1.6rem}.brand-info p{font-size:.84rem}.brand-action{font-size:.72rem;padding:10px 8px}.process-grid>div{padding:18px}.service-panel{gap:22px}.service-photo img{height:250px}.service-text h2{font-size:2.8rem}.area-links a{min-height:110px}.home-heading h2{font-size:clamp(2.5rem,9vw,3.6rem)}}
+@media(max-width:410px){.brand-tile{grid-template-columns:1fr}.brand-visual{height:175px;min-height:0}.brand-info{padding:18px}.vehicle-card{grid-template-columns:42% 58%}.vehicle-bottom strong{font-size:1.2rem}}
+
+.service-strip{background:#ffba08;color:#151515;text-align:center;padding:8px 18px;font-size:.82rem;font-weight:900;letter-spacing:.045em;text-transform:uppercase}
+.image-text img.product-photo{object-fit:contain;background:radial-gradient(circle at 50% 35%,#353a3c,#191c1e 72%);padding:25px;border-radius:12px}
+@media(max-width:720px){.service-strip{font-size:.72rem;padding:8px 12px}.image-text img.product-photo{height:280px;padding:18px}}
