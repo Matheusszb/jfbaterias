@@ -198,3 +198,51 @@ body{font-size:15px}
 .brand-visual{background:#fff;padding:0}
 .brand-visual img{filter:none}
 .image-text img.product-photo{background:#fff;padding:8px}
+
+/* Movimento sutil: destaque inicial, rolagem e resposta ao toque */
+.hero-v2 .hero-media{isolation:isolate;border-color:#6f562e;box-shadow:0 18px 42px rgba(0,0,0,.26)}
+.hero-v2 .hero-media::after{z-index:1}
+.hero-v2 .hero-media::before{
+  content:"";position:absolute;z-index:2;top:-30%;bottom:-30%;left:-25%;width:32%;
+  pointer-events:none;opacity:0;
+  background:linear-gradient(90deg,transparent,rgba(255,211,113,.16),transparent);
+  transform:translateX(-100%) skewX(-18deg);
+  animation:hero-sheen 9s ease-in-out infinite
+}
+.hero-v2 .hero-copy .eyebrow{animation:rise-in .6s ease both}
+.hero-v2 .hero-copy h1{animation:rise-in .7s ease .08s both}
+.hero-v2 .hero-copy .lead{animation:rise-in .7s ease .16s both}
+.hero-v2 .hero-actions{animation:rise-in .7s ease .24s both}
+.hero-v2 .hero-facts{animation:rise-in .7s ease .32s both}
+.hero-v2 .hero-media{animation:rise-in .8s ease .16s both}
+.reveal{opacity:0;translate:0 16px;transition:opacity .65s ease,translate .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.reveal.is-visible{opacity:1;translate:0 0}
+.brand-tile{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.brand-visual img,.vehicle-image img,.service-photo img{transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.area-links a{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.button{transition:transform .22s ease,background .22s ease,box-shadow .22s ease}
+@media(hover:hover){
+  .brand-tile:hover{transform:translateY(-4px);border-color:#9f792f;box-shadow:0 16px 30px rgba(0,0,0,.18)}
+  .brand-tile:hover .brand-visual img,.vehicle-card:hover .vehicle-image img{transform:scale(1.035)}
+  .service-photo:hover img{transform:scale(1.035)}
+  .area-links a:hover{border-color:#ddb362;box-shadow:0 12px 26px rgba(17,20,24,.10)}
+  .button:hover,.brand-action:hover{box-shadow:0 7px 20px rgba(255,186,8,.2)}
+}
+@keyframes rise-in{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes hero-sheen{
+  0%,12%{opacity:0;transform:translateX(-100%) skewX(-18deg)}
+  20%{opacity:1}
+  42%,100%{opacity:0;transform:translateX(520%) skewX(-18deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-v2 .hero-copy .eyebrow,.hero-v2 .hero-copy h1,.hero-v2 .hero-copy .lead,
+  .hero-v2 .hero-actions,.hero-v2 .hero-facts,.hero-v2 .hero-media,
+  .hero-v2 .hero-media::before{animation:none}
+  .reveal{opacity:1;translate:none}
+  .reveal,.brand-tile,.brand-visual img,.vehicle-image img,.service-photo img,
+  .area-links a,.button{transition:none}
+}
