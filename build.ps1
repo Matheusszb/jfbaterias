@@ -61,7 +61,7 @@ function Write-Page {
   <meta property="og:description" content="$safeDescription">
   <meta property="og:url" content="$canonical">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css?v=brand-fit-2">
   <script type="application/ld+json">$json</script>
   <script defer src="/site.js"></script>
 </head>

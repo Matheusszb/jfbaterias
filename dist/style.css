@@ -309,3 +309,28 @@ body::before{background:radial-gradient(circle at 80% 10%,rgba(239,189,88,.075),
   .area-links a:hover{border-color:#d4ad69}
   .button:hover,.brand-action:hover{box-shadow:0 7px 20px rgba(239,189,88,.18)}
 }
+
+/* Cartões de marcas: fotos completas e colunas sem largura mínima implícita */
+.brand-grid-v2{grid-template-columns:repeat(3,minmax(0,1fr));min-width:0;width:100%}
+.brand-tile,.brand-info,.brand-visual{min-width:0}
+.brand-visual{
+  display:flex;align-items:center;justify-content:center;
+  height:190px;overflow:hidden
+}
+.brand-visual img{
+  display:block;width:min(100%,190px);height:100%;
+  max-width:100%;object-fit:contain;object-position:center;
+  flex:none
+}
+.brand-action{white-space:normal;overflow-wrap:anywhere}
+@media(max-width:720px){
+  .brand-grid-v2{grid-template-columns:1fr}
+  .brand-tile{grid-template-columns:minmax(0,38%) minmax(0,1fr)}
+  .brand-visual{height:170px;min-height:170px}
+}
+@media(max-width:390px){
+  .brand-tile{grid-template-columns:1fr}
+  .brand-visual{height:160px;min-height:0}
+}
+
+@media(hover:hover){.brand-tile:hover .brand-visual img{transform:none}}
